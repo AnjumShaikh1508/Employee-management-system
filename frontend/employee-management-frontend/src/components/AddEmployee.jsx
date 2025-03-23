@@ -17,7 +17,7 @@ const AddEmployee = () => {
         };
         
         try {
-            await axios.post('http://localhost:5000/api/employees', formData);
+            await axios.post('https://employee-management-system-9gn4.onrender.com/api/employees', formData);
             alert('Employee added successfully!');
             setName('');
             setPosition('');

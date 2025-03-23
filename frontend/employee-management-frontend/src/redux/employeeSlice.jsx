@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchEmployeeById = createAsyncThunk(
   'employee/fetchEmployeeById',
   async (id) => {
-    const response = await axios.get(`http://localhost:5000/api/employees/${id}`);
+    const response = await axios.get(`https://employee-management-system-9gn4.onrender.com/api/employees/${id}`);
     return response.data;
   }
 );
@@ -14,7 +14,7 @@ export const fetchEmployeeById = createAsyncThunk(
 export const updateEmployee = createAsyncThunk(
   'employee/updateEmployee',
   async ({ id, formData }) => {
-    await axios.put(`http://localhost:5000/api/employees/${id}`, formData);
+    await axios.put(`https://employee-management-system-9gn4.onrender.com/api/employees/${id}`, formData);
   }
 );
 

@@ -13,7 +13,7 @@ const EditEmployee = () => {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/employees/${id}`);
+        const response = await axios.get(`https://employee-management-system-9gn4.onrender.com/api/employees/${id}`);
         const { name, position, salary } = response.data;
         setName(name);
         setPosition(position);
@@ -30,7 +30,7 @@ const EditEmployee = () => {
     const formData = { name, position, salary: parseFloat(salary) };
 
     try {
-      await axios.put(`http://localhost:5000/api/employees/${id}`, formData);
+      await axios.put(`https://employee-management-system-9gn4.onrender.com/api/employees/${id}`, formData);
       alert('Employee updated successfully!');
       navigate('/');
     } catch (error) {
